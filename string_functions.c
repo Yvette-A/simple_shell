@@ -12,11 +12,11 @@ char *_strcpy(char *dest, const char *src);
  */
 int _strlen(char *s)
 {
-        int i = 0, len = 0;
-
-        for (i = 0; s[i]; i++)
-                len++;
-        return (len);
+	int i = 0, len = 0;
+	/*to avoid trailing white space warning*/
+	for (i = 0; s[i]; i++)
+		len++;
+	return (len);
 }
 
 /**
@@ -28,13 +28,13 @@ int _strlen(char *s)
 
 char *_strcat(char *dest, char *src)
 {
-        int i = 0, len = 0;
-
-        while (dest[i++])
-                len++;
-        for (i = 0; src[i]; i++)
-                dest[len++] = src[i];
-        return (dest);
+	int i = 0, len = 0;
+	/*to avoid trailing white space warining*/
+	while (dest[i++])
+		len++;
+	for (i = 0; src[i]; i++)
+		dest[len++] = src[i];
+	return (dest);
 }
 
 /**
@@ -47,13 +47,13 @@ char *_strcat(char *dest, char *src)
 
 char *_strncat(char *dest, char *src, int n)
 {
-        int index = 0, len = 0;
-
-        while (dest[index++])
-                len++;
-        for (index = 0; index < n && src[index] != '\0'; index++)
-                dest[len++] = src[index];
-        return (dest);
+	int index = 0, len = 0;
+	/*to avoid trailing white space warning*/
+	while (dest[index++])
+		len++;
+	for (index = 0; index < n && src[index] != '\0'; index++)
+		dest[len++] = src[index];
+	return (dest);
 }
 
 /**
@@ -65,11 +65,11 @@ char *_strncat(char *dest, char *src, int n)
 
 char *_strcpy(char *dest, const char *src)
 {
-        int i = 0;
-
-        while ((dest[i] = src[i]) != '\0')
-                i++;
-        return (dest);
+	int i = 0;
+	/*to avoid trailing white space warning*/
+	while ((dest[i] = src[i]) != '\0')
+		i++;
+	return (dest);
 }
 
 /**
@@ -80,17 +80,17 @@ char *_strcpy(char *dest, const char *src)
 
 char *_strdup(const char *s)
 {
-        int len = 0;
-        char *ptr;
-
-        if (s == NULL)
-                return (NULL);
-        while (*s++)
-                len++;
-        ptr = malloc(sizeof(char) * (len + 1));
-        if (ptr == 0)
-                return (NULL);
-        for (len++; len--;)
-                ptr[len] = *--s;
-        return (ptr);
+	int len = 0;
+	char *ptr;
+	/*to avoid trailing white space warning*/
+	if (s == NULL)
+		return (NULL);
+	while (*s++)
+		len++;
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (ptr == 0)
+		return (NULL);
+	for (len++; len--;)
+		ptr[len] = *--s;
+	return (ptr);
 }
