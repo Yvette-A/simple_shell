@@ -24,3 +24,5 @@ int my_putchar(char c);
 char **tokenize_input(char *input_string);
 void show_prompt(void);
 int my_strcmp(const char *s1, const char *s2);
+void _signal(int n);
+void free_mem(char **buff);
