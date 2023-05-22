@@ -66,3 +66,21 @@ void _puts(const char *s)
 	}
 	putchar('\n');
 }
+
+/**
+ * my_strcmp - compares two strings
+ * @s1: frist string
+ * @s2: second string
+ *
+ * Return: 1 if its true
+ */
+
+int my_strcmp(const char *s1, const char *s2)
+{
+	while (*s1 && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+}
