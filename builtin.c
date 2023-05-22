@@ -13,10 +13,11 @@ int my_path(char **cmd, char *input);
 void print_env(char **env)
 {
 	int environ = 0;
-	
+	/*this space did not pass betty*/
 	while (env[environ] != NULL)
 	{
 		size_t length = strlen(env[environ]);
+		/*this space did not pass betty*/
 		write(STDOUT_FILENO, env[environ], length);
 		write(STDOUT_FILENO, "\n", 1);
 		environ++;
@@ -46,7 +47,7 @@ int builtin_handle(char **cmd, char *argv)
 {
 	char **env = environ;
 	struct builtin b = {"env", "exit"};
-	
+	/*this space did not pass betty*/
 	if (my_strcmp(*cmd, b.env) == 0)
 	{
 		print_env(env);
@@ -68,7 +69,7 @@ int builtin_handle(char **cmd, char *argv)
 void free_mem(char **buff)
 {
 	int i = 0;
-	
+	/*this space did not pass betty*/
 	if (buff == 0 || buff == NULL)
 		return;
 	while (buff[i])
