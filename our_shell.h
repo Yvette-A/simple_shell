@@ -24,3 +24,19 @@ int my_putchar(char c);
 char **tokenize_input(char *input_string);
 void show_prompt(void);
 int my_strcmp(const char *s1, const char *s2);
+void print_env(char **env);
+void my_exit(char **cmd, char *argv);
+int builtin_handle(char **cmd, char *argv);
+void free_mem(char **buff);
+int my_path(char **cmd, char *input);
+
+/**
+ * struct builtin - builtin variables
+ * @env: builtin environment variable
+ * @exit: built in exit
+ */
+struct builtin
+{
+	char *env;
+	char *exit;
+} b;
