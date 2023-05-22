@@ -21,3 +21,4 @@ char *_strchr(char *s, char ch);
 void _puts(const char *s);
 int _strncmp(char *s1, char *s2, int n);
 int my_putchar(char c);
+char **tokenize_input(char *input_string);
