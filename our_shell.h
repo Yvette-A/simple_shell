@@ -31,6 +31,9 @@ void my_exit(char **cmd, char *argv);
 int builtin_handle(char **cmd, char *argv);
 void free_mem(char **buff);
 int my_path(char **cmd, char *input);
+extern char **environ;
+void exec_cmd(char *cmd, char **av);
+extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 /**
  * struct builtin - builtin variables
