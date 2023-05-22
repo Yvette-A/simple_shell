@@ -40,3 +40,4 @@ struct builtin
 	char *env;
 	char *exit;
 } b;
+#endif
