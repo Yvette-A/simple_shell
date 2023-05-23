@@ -11,6 +11,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <stdbool.h>
+#define MAX_ARGS 10
 
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
@@ -34,6 +35,17 @@ int my_path(char **cmd, char *input);
 extern char **environ;
 void exec_cmd(char *cmd, char **av);
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
+char *_getenv(void);
+char *locate_cmd(char *cmd, char *input_string);
+char *check_path(char **cmd, char *av);
+/**
+ * struct check -checks for flag
+ * @interactive: flag
+ */
+struct check
+{
+	bool interactive;
+} check;
 
 /**
  * struct builtin - builtin variables

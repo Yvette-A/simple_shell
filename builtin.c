@@ -74,7 +74,6 @@ void free_mem(char **buff)
 		return;
 	while (buff[i])
 	{
-		free(buff[i]);
 		i++;
 	}
 	free(buff);
