@@ -24,9 +24,9 @@ int main(int ac, char **av, char *env[])
 	signal(SIGINT, _signal);
 	while (1)
 	{
-		 free_mem(cmd);
-                free_mem(tokens);
-                free(cmd_path);
+		free_mem(cmd);
+		free_mem(tokens);
+		free(cmd_path);
 		/*prompt user for input*/
 		show_prompt();
 		/*read input from user using getline*/
